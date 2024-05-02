@@ -12,6 +12,7 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
          * {
   margin: 0;
@@ -152,7 +153,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://cdn.pixabay.com/photo/2021/02/12/20/02/abstract-6009478_1280.jpg'); /* Replace 'your-background-image.jpg' with your image path */
+    background-image: url('https://images.pexels.com/photos/6468712/pexels-photo-6468712.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); /* Replace 'your-background-image.jpg' with your image path */
     background-size: cover; /* Ensure the image covers the entire background */
     background-repeat: no-repeat;
     z-index: -1;
@@ -170,11 +171,12 @@ nav {
     padding: 0 20px; /* Add padding to the content */
 }
 
-.review-h2  {
-    font-size: 4rem;
+.review-h2 {
+    font-size: 5rem;
     color: #fff;
-    margin-left: 4rem;
-    margin-top: 12rem;
+    /* margin-left: 36rem; */
+    text-align: center;
+    margin-top: 3rem;
 }
 
 .description {
@@ -511,12 +513,11 @@ nav {
           </div>
           <ul class="nav-links" >
             <li><a href="./index.html">Home</a></li>
-            <!-- <li><a href="#media">Media</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#purchase">Purchase</a></li>
-            <li><a href="#social">Social Media</a></li>
-            <li><a href="#community">Contact Us</a></li> -->
+            
+           
             <li><a href="./game.html">Game</a></li>
+            <li><a href="./forums.html">Forums </a></li>
+            <li><a href="./contact.html">Contact Us</a></li> 
           </ul>
       
           <div class="nav-icons">
@@ -536,7 +537,7 @@ nav {
         <div class="background-image"></div>
         <div class="container">
             <div class="content">
-                <h2 class="review-h2">Game Reviews</h2>
+                <h2 class="review-h2" data-aos="slide-right" data-aos-duration="1000">Game Reviews</h2>
                 <div class="description">
                     <!-- <p>
                         Check out our latest game reviews to discover new favorites and find out what's hot in the gaming world.
@@ -553,20 +554,20 @@ nav {
 
         
     
-          <div class="game-card">
+          <div class="game-card" data-aos="slide-right" data-aos-duration="1000">
             <img src="https://cdn.pixabay.com/photo/2020/06/21/21/53/skateboard-5326930_1280.jpg" alt="Chess Master">
-            <h2 class="card-name">Skate Series</h2>
-            <div class="stars" data-rating="2"></div>
-            <p class="description">Developed by EA Black Box, the Skate series offers a more realistic skateboarding experience with its innovative "flick-it" control scheme. Players can perform tricks using the right analog stick, creating a more immersive gameplay experience.</p>
+            <h2 class="card-name" data-aos="fade-in" data-aos-duration="4000">Skate Series</h2>
+            <div class="stars" data-rating="2" data-aos="fade-in" data-aos-duration="4000"></div>
+            <p class="description" data-aos="fade-in" data-aos-duration="4000">Developed by EA Black Box, the Skate series offers a more realistic skateboarding experience with its innovative "flick-it" control scheme. Players can perform tricks using the right analog stick, creating a more immersive gameplay experience.</p>
             
             <!-- <button class="play-button">Play Now</button> -->
           </div>
     
-          <div class="game-card">
+          <div class="game-card" data-aos="slide-left" data-aos-duration="1000">
             <img src="https://cdn.pixabay.com/photo/2024/03/05/05/37/ai-generated-8613769_1280.png" alt="Chess Master">
-            <h2 class="card-name">Session</h2>
-            <div class="stars" data-rating="3"></div>
-            <p class="description"> A skateboarding simulation game that focuses on realism and authenticity. Players have precise control over their skateboard, allowing them to perform realistic tricks and create custom skate spots.</p>
+            <h2 class="card-name" data-aos="fade-in" data-aos-duration="4000">Session</h2>
+            <div class="stars" data-rating="3" data-aos="fade-in" data-aos-duration="4000"></div>
+            <p class="description" data-aos="fade-in" data-aos-duration="4000"> A skateboarding simulation game that focuses on realism and authenticity. Players have precise control over their skateboard, allowing them to perform realistic tricks and create custom skate spots.</p>
            
             <!-- <button class="play-button">Play Now</button> -->
           </div>
@@ -575,60 +576,53 @@ nav {
       
     <div class="game-card-section">
 
-        <div class="game-card">
+        <div class="game-card" data-aos="slide-right" data-aos-duration="1000">
             <img src="https://cdn.pixabay.com/photo/2019/04/11/15/24/hockey-4119968_1280.jpg" alt="Chess Master">
-            <h2 class="card-name">Skate or Die Series</h2>
-            <div class="stars" data-rating="4"></div>
-            <p class="description">An old-school series that includes games like Skate or Die and Skate or Die 2: The Search for Double Trouble. These games offer a mix of skateboarding and mini-games, providing a nostalgic experience for players.</p>
+            <h2 class="card-name" data-aos="fade-in" data-aos-duration="4000">Skate or Die Series</h2>
+            <div class="stars" data-rating="4" data-aos="fade-in" data-aos-duration="4000"></div>
+            <p class="description" data-aos="fade-in" data-aos-duration="4000">An old-school series that includes games like Skate or Die and Skate or Die 2: The Search for Double Trouble. These games offer a mix of skateboarding and mini-games, providing a nostalgic experience for players.</p>
            
             <!-- <button class="play-button">Play Now</button> -->
           </div>
 
-          <div class="game-card">
+          <div class="game-card" data-aos="slide-left" data-aos-duration="1000">
             <img src="https://cdn.pixabay.com/photo/2017/04/30/22/39/hockey-2274221_1280.jpg" alt="Chess Master">
-            <h2 class="card-name">Tony Hawk's Pro Skater Series</h2>
-            <div class="stars" data-rating="4"></div>
-            <p class="description">This iconic series features various installments, including Tony Hawk's Pro Skater, Tony Hawk's Pro Skater 2, and so on. Players can perform tricks, complete objectives, and explore skateboarding environments.</p>
+            <h2 class="card-name" data-aos="fade-in" data-aos-duration="4000">Tony Hawk's Pro Skater Series</h2>
+            <div class="stars" data-rating="4" data-aos="fade-in" data-aos-duration="4000"></div>
+            <p class="description" data-aos="fade-in" data-aos-duration="4000">This iconic series features various installments, including Tony Hawk's Pro Skater, Tony Hawk's Pro Skater 2, and so on. Players can perform tricks, complete objectives, and explore skateboarding environments.</p>
           
             <!-- <button class="play-button">Play Now</button> -->
           </div>
     </div>
 
 
-    <section class="recent-reviews-section" style="" >
+    <section class="recent-reviews-section"  >
         
         <div class="container" >
-            <h2 class="recent-review-h2">Recent Reviews</h2>
+            <h2 class="recent-review-h2" data-aos="fade-in" data-aos-duration="4000">Recent Reviews</h2>
             <div class="review-cards">
-                <div class="review-card">
+                <div class="review-card" data-aos="fade-in" data-aos-duration="4000">
                     <img src="https://cdn.pixabay.com/photo/2016/09/20/21/45/skating-1683500_1280.jpg" alt="Skate Game 1">
                     <div class="card-details">
                         <h3>Radical Ramps</h3>
                         <p>Radical Ramps is an adrenaline-fueled skateboarding game featuring extreme stunts and insane challenges. Conquer the most daring ramps and show off your skills.</p>
                     </div>
                 </div>
-                <div class="review-card">
+                <div class="review-card" data-aos="fade-in" data-aos-duration="4000">
                     <img src="https://cdn.pixabay.com/photo/2022/08/22/11/04/skate-7403432_1280.jpg" alt="Skate Game 2">
-                    <div class="card-details">
+                    <div class="card-details" >
                         <h3>Grind City</h3>
                         <p>Grind City is a vibrant skateboarding adventure set in an urban metropolis. Explore the city streets, perform epic grinds, and discover hidden spots.</p>
                     </div>
                 </div>
-                <div class="review-card">
+                <div class="review-card" data-aos="fade-in" data-aos-duration="4000">
                     <img src="https://cdn.pixabay.com/photo/2020/02/27/03/46/boy-4883333_1280.jpg" alt="Skate Game 3">
                     <div class="card-details">
                         <h3>Thrashville</h3>
                         <p>Thrashville is a hardcore skateboarding game set in a gritty urban environment. Push your skills to the limit as you navigate through challenging obstacles and obstacles.</p>
                     </div>
                 </div>
-                <!-- <div class="review-card">
-                    <img src="skate-game-4.jpg" alt="Skate Game 4">
-                    <div class="card-details">
-                        <h3>Vert Vortex</h3>
-                        <p>Vert Vortex is an intense skateboarding experience that focuses on vert ramp skating. Test your vert skills and pull off jaw-dropping aerial maneuvers.</p>
-                    </div>
-                </div> -->
-                <!-- Add more review cards as needed -->
+             
             </div>
         </div>
     </section>
@@ -678,18 +672,22 @@ nav {
 </div>
 <div class="footer-legal">
   <ul>
-    <li data-aos="fade-up" data-aos-duration="1000">Legal & Privacy</li>
-    <li data-aos="fade-up" data-aos-duration="1000">Online Service Updates</li>
-    <li data-aos="fade-up" data-aos-duration="1000">User Agreement</li>
+    <li >Legal & Privacy</li>
+    <li >Online Service Updates</li>
+    <li>User Agreement</li>
     <div class="box">
-      <li data-aos="fade-up" data-aos-duration="1000">Privacy & Cookie Policy (Your Privacy Rights)</li>
-      <li data-aos="fade-up" data-aos-duration="1000">Cookie Preferences</li>
+      <li >Privacy & Cookie Policy (Your Privacy Rights)</li>
+      <li >Cookie Preferences</li>
     </div>
-    <li data-aos="fade-up" data-aos-duration="1000">© 2024 Electronic Arts Inc.</li>
+    <li data-aos="fade-up" >© 2024 Electronic Arts Inc.</li>
   </ul>
 </div>
 
 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
     <script>
         document.querySelectorAll('.game-card').forEach(function(card) {
   const stars = card.querySelector('.stars');
