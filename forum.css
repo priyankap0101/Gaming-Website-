@@ -1,128 +1,135 @@
 /* Basic styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #1a1a1a; /* Dark background */
+    /* background-color: #1a1a1a; Dark background */
     color: #fff; /* Text color */
     margin: 0;
     padding: 0;
 }
-/* Header styles */
-header {
-    background-color: #033757;
-    padding: 18px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Logo styles */
-  .logo {
-    color: #fff;
-    /* margin: 0; */
-    font-size: 24px;
-    margin-right: 20px; /* Add some right margin to separate the logo from the navigation */
-  }
-  
-  /* Navigation styles */
-  .nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
-  
-  .nav ul li {
-    margin-right: 10px;
-    font-size: larger;
-    font-weight: bolder;
-  }
-  
-  .nav ul li a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 15px;
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .nav ul li a:hover {
-    transform: translateY(-3px);
-  }
-  
-  /* Media Queries for smaller screens */
-  @media only screen and (max-width: 768px) {
-    .logo {
-      margin-top: -20rem;
-      font-size: 20px; /* Adjust logo size for smaller screens */
-      margin-right: 10px; /* Reduce margin for smaller screens */
-    }
-  
-    .nav ul {
-      flex-direction: column;
-      align-items: center;
-      margin-top: 3rem;
-      margin-right: 11rem;
-    }
-  
-    .nav ul li {
-      margin: 10px 0;
-    }
-  }
-  
-  /* Additional media query for tablets */
-  @media only screen and (min-width: 601px) and (max-width: 1024px) {
-    .nav ul li {
-      display: inline-block;
-      margin: 0 15px;
-    }
-  }
-  
-  /* Additional media query for larger screens */
-  @media only screen and (min-width: 1025px) {
-    .nav ul {
-      justify-content: flex-end;
-    }
-  }
-  @media only screen and (max-width: 768px)
-{
-  h2.logo {
-  margin-top: -29rem;
-}
-}
-/* Style for the button */
-.sign-up {
-    background-color: #138c72; /* Blue background color */
-    color: #fff; /* White text color */
-    border: none; /* Remove button border */
-    padding: 10px 20px; /* Add some padding */
-    border-radius: 5px; /* Add border radius for rounded corners */
-    text-decoration: none; /* Remove default button underline */
-    display: block; /* Make button fill the width of its container */
-    width: 100%; /* Make button fill the width of its container */
-    text-align: center; /* Center align text */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    font-family: Arial, sans-serif; /* Set font family */
-    font-size: 16px; /* Set font size */
-    font-weight: bold; /* Set font weight */
+ /* Navigation Styles */
+ nav {
+  background-color: #18394e;
+  /*Darkbackgroundcolor*/
+  color: #ffffff;
+  /*Lighttextcolor*/
+  padding: 2px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /*Addshadowfordepth*/
+  transition: background-color 0.3s ease;
+  /* Smooth transition for background color */
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
 }
 
-/* Style for button hover state */
-.sign-up:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+.navcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 4px;
+  padding: 0 20px;
 }
 
-/* Style for button active state */
-.sign-up:active {
-    background-color: #004080; /* Even darker blue when button is clicked */
+.logo img {
+  height: 40px; /* Adjust the height of the logo as needed */
+  width: 40px;
+  margin-right: 2rem; /* Add some space between logo and text */
 }
 
+.nav-links {
+  list-style: none;
+  text-align: center;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav-links li:last-child {
+  margin-right: 46px; /* Add space between "Contact Us" link and icons */
+}
+
+.nav-links li a {
+  color: #ffffff; /* Light text color */
+  background-color: transparent; /* Transparent background color */
+  border: 2px solid transparent; /* Transparent border */
+  font-size: 18px; /* Larger font size for navigation links */
+  text-decoration: none; /* Remove underline */
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  background-color: rgba(
+    0,
+    123,
+    255,
+    0.5
+  ); /* Darker background color on hover or active */
+  /* border-color: rgba(0, 123, 255, 0.5);  */
+  /* Darker border color on hover or active */
+  font-size: 20px;
+}
+
+.nav-links li a:hover {
+  transform: translateY(-2px); /* Move link slightly upwards on hover */
+}
+/* Button Styles */
+.btn {
+  display: inline-block;
+  background-color: #4caf50; /* Green background color */
+  color: #ffffff; /* Light text color */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 20px; /* Add padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add border radius */
+  cursor: pointer; /* Add cursor pointer */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.btn:hover {
+  background-color: #45a049; /* Darker green background color on hover */
+}
+
+/* Anchor Tag Styles */
+.btn a {
+  color: inherit; /* Inherit text color from parent */
+  text-decoration: none; /* Remove underline */
+}
+
+.btn a:hover {
+  text-decoration: none; /* Remove underline on hover */
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+}
+
+.nav-icons a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 15px; /* Add space between nav icons */
+  font-size: 24px; /* Larger font size for icon links */
+}
+
+.nav-icons a:hover {
+  transform: translateY(-2px);
+}
 
 .container {
-    display: flex;
+    display: block;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 6rem;
     flex-wrap: wrap; /* Ensure flex items wrap on smaller screens */
 }
 
@@ -144,15 +151,17 @@ main {
 
 aside {
     width: 20%;
-    background-color: #2d2d2d; /* Darker background for sidebar */
+    /* background-color: #2d2d2d; Darker background for sidebar */
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* White shadow */
+    /* box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); White shadow */
     margin-right: 20px;
 }
 
 .card {
+  margin-left: 3rem;
+  width: 70rem;
     padding: 20px;
-    background-color: #333; /* Dark background for cards */
+    background-color: hsl(351.03deg 83.08% 57.49%); /* Dark background for cards */
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Dark shadow */
     margin-bottom: 20px;
@@ -190,14 +199,18 @@ aside {
     line-height: 1.5;
 }
 
-form {
+/* form {
     width: 100%;
-    background-color: #2d2d2d; /* Darker background for form */
+    
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* White shadow */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); 
     padding: 20px;
-}
+} */
 
+form#new-thread-form {
+  width: max-content;
+  margin-left: 2rem;
+}
 form h2 {
     margin-top: 0;
     font-size: 1.5rem;
@@ -205,38 +218,31 @@ form h2 {
 }
 
 .section {
-    background-color: #2d2d2d; /* Darker background for sections */
+    /* background-color: #2d2d2d; Darker background for sections */
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* White shadow */
     padding: 20px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .section h2 {
     margin-top: 0;
     font-size: 1.5rem;
-    color: #fff; /* Title color */
+    color: #050505; /* Title color */
 }
 
 .thread {
-    margin-top: 4rem;
-    background-color: #2d2d2d; /* Darker background for threads */
-    border: 1px solid #666; /* Dark border */
+    margin-top: 1rem;
+    /* background-color: #2d2d2d; Darker background for threads */
+    /* border: 1px solid #666; Dark border */
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* White shadow */
+    box-shadow: 0 2px 4px rgba(2, 137, 117, 0.1); /* White shadow */
     transition: transform 0.3s, box-shadow 0.3s;
 }
 /* Style for pre-posted threads */
-.thread {
-    background-color: #333; /* Dark background */
-    color: #fff; /* Text color */
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
-}
+
 
 .thread h3 {
     margin-top: 0;
@@ -245,6 +251,7 @@ form h2 {
 
 .thread p {
     margin-bottom: 10px;
+    color: #000000;
 }
 
 /* Style for author info */
@@ -252,17 +259,19 @@ form h2 {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    color: darkorange;
 }
 
 .author-info i {
     margin-right: 5px;
+    
 }
 
 /* Style for buttons */
 .edit-thread-btn,
 .delete-thread-btn {
-    background-color: #138c72; /* Green background */
-    color: #fff; /* White text */
+    background-color: #056121; /* Green background */
+    color: #ffffff; /* White text */
     border: none;
     padding: 8px 16px;
     border-radius: 5px;
@@ -286,7 +295,7 @@ form h2 {
     margin-top: 0;
     font-size: 2rem;
     margin-bottom: 10px;
-    color: #fff; /* Thread title color */
+    color: #2d2c2c; /* Thread title color */
 }
 
 .thread p {
@@ -298,13 +307,14 @@ form h2 {
     border-bottom: 1px solid #666; /* Dark border */
     padding: 10px 0;
     font-size: 1.3rem;
+    color: #000000;
 }
 
-form {
-    margin: 0 auto; /* Align form center */
-    width: 80%; /* Reduce form width */
-    max-width: 600px; /* Limit form width */
-}
+/* form {
+    margin: 0 auto; 
+    width: 80%; 
+    max-width: 600px; 
+} */
 
 input[type="text"],
 textarea {
@@ -315,13 +325,13 @@ textarea {
     margin-bottom: 10px;
     box-sizing: border-box;
     font-size: 1.1rem;
-    color: #fff; /* Text color */
-    background-color: #333; /* Dark background for inputs */
+    color: #000000; /* Text color */
+    /* background-color: #333; Dark background for inputs */
 }
 
 button {
     background-color: #4CAF50; /* Green button */
-    color: #fff;
+    color: #ffffff;
     border: none;
     padding: 12px 20px;
     cursor: pointer;
@@ -333,7 +343,10 @@ button {
 button:hover {
     background-color: #45a049; /* Darker green on hover */
 }
-
+.fa-solid, .fas {
+  font-weight: 900;
+  color: black;
+}
 .skate-game {
     display: flex;
     align-items: center;
@@ -359,12 +372,18 @@ button:hover {
 }
 
 .forecast-list {
+  display: flex;
+  justify-content: space-evenly;
     list-style-type: none;
     padding: 0;
 }
 
 .forecast-list li {
+  
+  width: 20rem;
+  
     margin-bottom: 15px;
+   
     background-color: rgba(255, 255, 255, 0.1); /* Light background color for forecast items */
     padding: 15px;
     border-radius: 10px;
@@ -467,7 +486,7 @@ button:hover {
 }
 
 .footer {
-    background-color: #000918;
+    background-color: #67dbbe;
     color: #fff;
     padding: 20px 0;
   }
