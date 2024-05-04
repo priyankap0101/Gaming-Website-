@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forum</title>
-    <link rel="stylesheet" href="./forum.css">
+    <link rel="stylesheet" href="./trial.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -47,7 +47,7 @@
             <form id="new-thread-form">
                 <input type="text" id="thread-title" placeholder="Thread Title" required>
                 <textarea id="thread-content" placeholder="Thread Content" required></textarea>
-                <button type="submit"><i class="fas fa-plus"></i> Create Thread</button>
+                <button type="submit"  class="create-thread-btn"><i class="fas fa-plus"></i> Create Thread</button>
             </form>
         </section>
         <!-- Other sections can be added similarly -->
@@ -90,7 +90,7 @@
             </ul>
         </div>
         <div class="card" style="background-color: #4e6bff;">
-            <h2>Upcoming Live </h2>
+            <h2 id="forecast-heading">Upcoming Live </h2>
             <ul class="forecast-list">
                 <li>
                     <span class="forecast-title">SkateBros</span> <br>
@@ -102,6 +102,7 @@
                     <span class="forecast-time">May 12, 2024, 2:30 PM</span><br>
                     <button class="set-reminder-btn">Set Reminder</button>
                 </li>
+                
                 <!-- Add more forecast items as needed -->
             </ul>
         </div>
@@ -109,10 +110,12 @@
     </aside>
 
     <aside>
-        <div class="card">
+      
+        <div class="card skategame-card">
             <h2>Trending Skate Games</h2>
             <div class="skate-game">
-                <img src="./image/sketch.jpg" alt="Skate Game 1">
+               
+                <!-- <img src="./image/sketch.jpg" alt="Skate Game 1"> -->
                 <div class="skate-game-info">
                     <h3>SkateBros: Street Fury</h3>
                     <p>Platform: PC, PS5, Xbox Series X</p>
@@ -121,7 +124,7 @@
                 </div>
             </div>
             <div class="skate-game">
-                <img src="./image/sket4.jpg" alt="Skate Game 2">
+                <!-- <img src="./image/sket4.jpg" alt="Skate Game 2"> -->
                 <div class="skate-game-info">
                     <h3>RadRollers: Urban Shredders</h3>
                     <p>Platform: Nintendo Switch</p>
@@ -156,44 +159,33 @@
     </aside>
 </div>
 
-<div class="footer-line"></div>
 <footer class="footer">
-  <div class="footer-content">
- 
-    <div class="footer-social" id="social">
-
-      <a href="https://twitter.com/anuscoinsol"><i
-          class="fa-brands fa-x-twitter"></i></a>
-      <a href="https://coinmarketcap.com/"><i
-          class="fa-solid fa-globe"></i></a>
-      <a href="https://t.me/UranusCommunity"><i
-          class="fa-brands fa-telegram"></i></a>
-    </div>
-  </div>
-  <!-- <div class="footer-line"></div> -->
-
-</footer>
-
-<div class="footer-bottom">
-
-  <div class="footer-legal">
-    <ul>
-      <li data-aos="fade-up" data-aos-duration="1000">Legal & Privacy</li>
-      <li data-aos="fade-up" data-aos-duration="1000">General Statement</li>
-      <li data-aos="fade-up" data-aos-duration="1000">Legal Advice
-      </li>
-      <div class="box">
-        <li>
-        </li>
-        <li>
-            Uranus Token</li>
+    <div class="footer-content">
+      <div class="footer-social" id="social">
+        <a href="https://twitter.com/anuscoinsol"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://coinmarketcap.com/"><i class="fa-solid fa-globe"></i></a>
+        <a href="https://t.me/UranusCommunity"><i class="fa-brands fa-telegram"></i></a>
       </div>
-      <li>© Uranus.io 2024 - 2.80.1 - info@Uranus.io | Ads & Marketing:
-        marketing@Uranus.io</li>
-    </ul>
-  </div>
-
-</div>
+    </div>
+  
+    <!-- Styling for the horizontal line -->
+    <hr class="footer-line">
+  
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        <ul>
+          <li data-aos="fade-up" data-aos-duration="1000">Legal & Privacy</li>
+          <li data-aos="fade-up" data-aos-duration="1000">General Statement</li>
+          <li data-aos="fade-up" data-aos-duration="1000">Legal Advice</li>
+          <div class="box">
+            <li>Uranus Token</li>
+          </div>
+          <li>© Uranus.io 2024 - 2.80.1 - info@Uranus.io | Ads & Marketing: marketing@Uranus.io</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
 
 <!-- JavaScript code -->
 <script>
@@ -221,21 +213,24 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
 
         const replyBtn = thread.querySelector('.reply-btn');
-        replyBtn.addEventListener('click', function() {
-            const commentTextBox = document.createElement('input');
-            commentTextBox.setAttribute('type', 'text');
-            commentTextBox.setAttribute('placeholder', 'Enter your comment');
-            commentTextBox.style.marginTop = '10px'; // Apply margin top
-            const submitBtn = document.createElement('button');
-            submitBtn.textContent = 'Submit';
-            submitBtn.addEventListener('click', function() {
-                const comment = commentTextBox.value.trim();
-                if (comment !== '') {
-                    addComment(thread, comment);
-                    commentTextBox.remove();
-                    submitBtn.remove();
-                }
-            });
+replyBtn.addEventListener('click', function() {
+    const commentTextBox = document.createElement('input');
+    commentTextBox.setAttribute('type', 'text');
+    commentTextBox.setAttribute('placeholder', 'Enter your comment');
+    commentTextBox.style.marginTop = '10px'; // Apply margin top
+    
+    const submitBtn = document.createElement('button');
+    submitBtn.textContent = 'Submit';
+    submitBtn.classList.add('submit-btn'); // Add a class to the submit button
+    
+    submitBtn.addEventListener('click', function() {
+        const comment = commentTextBox.value.trim();
+        if (comment !== '') {
+            addComment(thread, comment);
+            commentTextBox.remove();
+            submitBtn.remove();
+        }
+    });
             thread.appendChild(commentTextBox);
             thread.appendChild(submitBtn);
         });
