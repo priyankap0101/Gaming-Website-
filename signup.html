@@ -18,108 +18,105 @@
         padding: 0;
       }
 
+      .container {
+        margin: auto;
+      }
+      /* Header Styles */
+      #header {
+        background-color: #333; /* Darker background color for header */
+        /* padding: 10px 0; Add padding to header */
+      }
+      /* Navigation Styles */
+      nav {
+        height: min-content;
+        background-color: #292929;
+        /*Darkbackgroundcolor*/
+        color: #ffffff;
+        /*Lighttextcolor*/
+        /* padding: 10px 0; Add padding to header */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        /*Addshadowfordepth*/
+        transition: background-color 0.3s ease;
+        /* Smooth transition for background color */
+        -webkit-transition: background-color 0.3s ease;
+        -moz-transition: background-color 0.3s ease;
+        -ms-transition: background-color 0.3s ease;
+        -o-transition: background-color 0.3s ease;
+      }
 
+      .navcontainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 1200px;
+        margin: 4px;
+        padding: 0 20px;
+      }
 
-.container {
-  margin: auto;
-}
-/* Header Styles */
-#header {
- 
-  background-color: #333; /* Darker background color for header */
-  /* padding: 10px 0; Add padding to header */
-}
-/* Navigation Styles */
-nav {
-  height: min-content;
-  background-color: #292929;
-  /*Darkbackgroundcolor*/
-  color: #ffffff;
-  /*Lighttextcolor*/
-  /* padding: 10px 0; Add padding to header */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /*Addshadowfordepth*/
-  transition: background-color 0.3s ease;
-  /* Smooth transition for background color */
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
-}
+      .logo img {
+        height: 40px; /* Adjust the height of the logo as needed */
+        width: 40px;
+        margin-right: 2rem; /* Add some space between logo and text */
+      }
 
-.navcontainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  max-width: 1200px;
-  margin: 4px;
-  padding: 0 20px;
-}
+      nav ul {
+        list-style-type: none;
+      }
 
-.logo img {
-  height: 40px; /* Adjust the height of the logo as needed */
-  width: 40px;
-  margin-right: 2rem; /* Add some space between logo and text */
-}
+      nav ul li {
+        display: inline-block;
+        margin-left: 20px;
+      }
 
-nav ul {
-  list-style-type: none;
-}
+      nav ul li a {
+        text-decoration: none;
+        color: #ccc; /* Link color */
+        font-size: 16px; /* Adjust font size */
+        transition: color 0.3s ease; /* Smooth transition */
+        padding: 10px; /* Add padding to links */
+        display: flex; /* Use flexbox to align icon and text */
+        align-items: center; /* Center align icon and text */
+      }
 
-nav ul li {
-  display: inline-block;
-  margin-left: 20px;
-}
+      nav ul li a i {
+        margin-right: 8px; /* Add spacing between icon and text */
+        font-size: 20px; /* Icon size */
+      }
 
-nav ul li a {
-  text-decoration: none;
-  color: #ccc; /* Link color */
-  font-size: 16px; /* Adjust font size */
-  transition: color 0.3s ease; /* Smooth transition */
-  padding: 10px; /* Add padding to links */
-  display: flex; /* Use flexbox to align icon and text */
-  align-items: center; /* Center align icon and text */
-}
+      nav ul li a:hover {
+        color: #ffd700; /* Hover color */
+      }
 
-nav ul li a i {
-  margin-right: 8px; /* Add spacing between icon and text */
-  font-size: 20px; /* Icon size */
-}
+      /* Responsive styles */
+      @media only screen and (max-width: 768px) {
+        .navcontainer {
+          flex-direction: column;
+          align-items: flex-start;
+        }
 
-nav ul li a:hover {
-  color: #ffd700; /* Hover color */
-}
+        .logo {
+          margin-bottom: 20px;
+        }
 
-/* Responsive styles */
-@media only screen and (max-width: 768px) {
-  .navcontainer {
-      flex-direction: column;
-      align-items: flex-start;
-  }
+        nav {
+          text-align: center;
+        }
 
-  .logo {
-      margin-bottom: 20px;
-  }
+        nav ul {
+          display: block;
+          margin-bottom: 20px;
+        }
 
-  nav {
-      text-align: center;
-  }
-
-  nav ul {
-      display: block;
-      margin-bottom: 20px;
-  }
-
-  nav ul li {
-      display: block;
-      margin: 10px 0;
-  }
-}
+        nav ul li {
+          display: block;
+          margin: 10px 0;
+        }
+      }
 
       /* Make form responsive */
       /* form {
@@ -145,97 +142,94 @@ nav ul li a:hover {
       }
 
       /* Make form responsive */
-form {
-  max-width: 90%;
-  margin: 8rem auto 2rem; /* Adjusted margins for better spacing */
-}
+      form {
+        max-width: 90%;
+       
+      }
 
+      /* Adjust font size for smaller screens */
+      label,
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      button[type="submit"] {
+        font-size: 16px;
+      }
 
+      form {
+        max-width: 400px;
+        width: 90%; /* Adjusted width for smaller screens */
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        margin: 6rem auto 2rem; /* Center the form vertically and horizontally */
+      }
 
-/* Adjust font size for smaller screens */
-label,
-input[type="text"],
-input[type="email"],
-input[type="password"],
-button[type="submit"] {
-  font-size: 16px;
-}
+      h2 {
+        font-size: medium;
+        text-align: center;
+        color: antiquewhite;
+      }
 
-form {
-  max-width: 400px;
-  width: 90%; /* Adjusted width for smaller screens */
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  margin: 8rem auto 2rem; /* Center the form vertically and horizontally */
-}
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 14px; /* Adjusted font size for smaller screens */
+        font-weight: bolder;
+      }
 
-h2 {
-  font-size: medium;
-  text-align: center;
-  color: antiquewhite;
-}
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        padding: 12px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        font-size: 16px;
+      }
 
-label {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 14px; /* Adjusted font size for smaller screens */
-  font-weight: bolder;
-}
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="password"]:focus {
+        outline: none;
+        box-shadow: 0 0 5px #138c72;
+      }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  padding: 12px;
-  margin-bottom: 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  font-size: 16px;
-}
+      button[type="submit"] {
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        background-color: #138c72;
+        color: #fff;
+        font-size: 14px; /* Adjusted font size for smaller screens */
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
-  outline: none;
-  box-shadow: 0 0 5px #138c72;
-}
+      /* Style for button hover state */
+      button[type="submit"]:hover {
+        background-color: #0b5f49;
+      }
 
-button[type="submit"] {
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  background-color: #138c72;
-  color: #fff;
-  font-size: 14px; /* Adjusted font size for smaller screens */
-  cursor: pointer;
-  transition: background-color 0.3s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+      .message {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #138c72;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        display: none;
+      }
 
-/* Style for button hover state */
-button[type="submit"]:hover {
-  background-color: #0b5f49;
-}
-
-.message {
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #138c72;
-  color: #fff;
-  text-align: center;
-  border-radius: 5px;
-  display: none;
-}
-
-.success {
-  background-color: #0b5f49;
-}
-
+      .success {
+        background-color: #0b5f49;
+      }
 
       /* Style for the button */
       .sign-up-btn {
@@ -250,7 +244,7 @@ button[type="submit"]:hover {
         text-align: center; /* Center align text */
         cursor: pointer; /* Change cursor to pointer on hover */
         font-family: Arial, sans-serif; /* Set font family */
-        font-size: 16px; /* Set font size */
+        font-size: 13px; /* Set font size */
         font-weight: bold; /* Set font weight */
       }
 
@@ -273,79 +267,70 @@ button[type="submit"]:hover {
         font-weight: bold; /* Set font weight */
       }
       @media only screen and (max-width: 768px) {
-  form {
-    width: 90%; /* Adjusted width for smaller screens */
-    margin-top: 31rem;
-  }
-}
-
-
-
+        form {
+          width: 70%; /* Adjusted width for smaller screens */
+          margin-top: 29rem;
+        }
+      }
     </style>
   </head>
 
   <body>
     <header id="header">
-        <nav>
-          <div class="navcontainer"  data-aos="fade-in" data-aos-duration="1000">
-            <div class="logo">
-              <img src="./image/logo2.png" alt="Skater Republic Logo" />
-              <!-- Add your logo image here -->
-            </div>
-            <ul class="nav-links">
-              <li>
-                <a href="./index.html"><i class="fas fa-home"></i> Home</a>
-              </li>
-              <li>
-                <a href="./game.html"><i class="fas fa-gamepad"></i> Game</a>
-              </li>
-              <li>
-                <a href="./forums.html"><i class="fas fa-comments"></i> Forums</a>
-              </li>
-              <li>
-                <a href="./contact.html"
-                  ><i class="fas fa-envelope"></i> Contact Us</a
-                >
-              </li>
-              <li>
-                <a href="./login.html"
-                  ><i class="fas fa-sign-in-alt"></i> Log In</a
-                >
-              </li>
-              <li>
-                <a href="./signup.html"
-                  ><i class="fas fa-user-plus"></i> Sign Up</a
-                >
-              </li>
-            </ul>
+      <nav>
+        <div class="navcontainer" data-aos="fade-in" data-aos-duration="1000">
+          <div class="logo">
+            <img src="./image/logo2.png" alt="Skater Republic Logo" />
+            <!-- Add your logo image here -->
           </div>
-        </nav>
-      </header>
-
-      <form id="signup-form">
-        <h2>Sign Up</h2>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required />
-    
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-    
-        <label for="password">Password:</label>
-        <div>
-          <input type="password" id="password" name="password" required />
-          <input type="checkbox" id="show-password" class="show-password" />
-          <label for="show-password">Show Password</label>
+          <ul class="nav-links">
+            <li>
+              <a href="./index.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="./game.html"><i class="fas fa-gamepad"></i> Game</a>
+            </li>
+            <li>
+              <a href="./forums.html"><i class="fas fa-comments"></i> Forums</a>
+            </li>
+            <!-- <li>
+              <a href="./contact.html"
+                ><i class="fas fa-envelope"></i> Contact Us</a
+              >
+            </li> -->
+            <li>
+              <a href="./login.html"
+                ><i class="fas fa-sign-in-alt"></i> Log In</a
+              >
+            </li>
+            <li>
+              <a href="./signup.html"
+                ><i class="fas fa-user-plus"></i> Sign Up</a
+              >
+            </li>
+          </ul>
         </div>
-    
-        <button type="submit" class="sign-up">
-          Sign Up 
-        </button>
-        <div class="message" id="signup-message">Sign-up successful!</div>
-      </form>
-     
-    
+      </nav>
+    </header>
 
+    <form id="signup-form">
+      <h2>Sign Up</h2>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
 
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">Password:</label>
+      <div>
+        <input type="password" id="password" name="password" required />
+        <input type="checkbox" id="show-password" class="show-password" />
+        <label for="show-password">Show Password</label>
+      </div>
+
+      <button type="submit" class="sign-up">Sign Up</button>
+      <div class="message" id="signup-message">Sign-up successful!</div>
+    </form>
 
     <script>
       document
@@ -362,17 +347,17 @@ button[type="submit"]:hover {
           }, 3000);
         });
 
-         // JavaScript code to toggle password visibility
-    var passwordInput = document.getElementById("password");
-    var showPasswordCheckbox = document.getElementById("show-password");
+      // JavaScript code to toggle password visibility
+      var passwordInput = document.getElementById("password");
+      var showPasswordCheckbox = document.getElementById("show-password");
 
-    showPasswordCheckbox.addEventListener("change", function() {
-      if (showPasswordCheckbox.checked) {
-        passwordInput.type = "text"; // Show password
-      } else {
-        passwordInput.type = "password"; // Hide password
-      }
-    });
+      showPasswordCheckbox.addEventListener("change", function () {
+        if (showPasswordCheckbox.checked) {
+          passwordInput.type = "text"; // Show password
+        } else {
+          passwordInput.type = "password"; // Hide password
+        }
+      });
     </script>
   </body>
 </html>

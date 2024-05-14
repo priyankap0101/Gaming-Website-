@@ -17,13 +17,13 @@ body {
 /* Header Styles */
 #header {
  
-  background-color: #333; /* Darker background color for header */
+  background-color: #0c9ee2; /* Darker background color for header */
   /* padding: 10px 0; Add padding to header */
 }
 /* Navigation Styles */
 nav {
   height: min-content;
-  background-color: #292929;
+  background-color: #029492;
   /*Darkbackgroundcolor*/
   color: #ffffff;
   /*Lighttextcolor*/
@@ -69,8 +69,9 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #ccc; /* Link color */
-  font-size: 16px; /* Adjust font size */
+  font-weight: bold;
+  color: #ffffff; /* Link color */
+  font-size: 20px; /* Adjust font size */
   transition: color 0.3s ease; /* Smooth transition */
   padding: 10px; /* Add padding to links */
   display: flex; /* Use flexbox to align icon and text */
@@ -119,8 +120,8 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #180d0d; /* Fallback color */
-  background-image: url("./image/digitalbg.jpg");
+  /* background-color: #180d0d; Fallback color */
+  /* background-image: url("./image/digitalbg.jpg"); */
   background-position: center;
   background-size: cover;
   overflow: hidden; /* Hide overflow content */
@@ -154,7 +155,7 @@ nav ul li a:hover {
 .buffer {
   width: 100%;
 
-  background-color: #181717; /* Fallback color */
+  background-color: #ffffff; /* Fallback color */
   background-image: url("./image/19.simple-black-abstract-gradient-geometric-260nw-1416806981.jpg");
   background-position: center;
   background-size: cover;
@@ -163,9 +164,9 @@ nav ul li a:hover {
 .parallax-container2 {
   display: flex;
   flex-wrap: wrap;
-  padding: 2rem 0;
+  padding: 0;
   /* Fallback color */
-  background-image: url("./image/Abstract-blue-neon-rays-background-_HD_BG.webp");
+  /* background-image: url("./image/Abstract-blue-neon-rays-background-_HD_BG.webp"); */
   background-position: center;
   background-size: cover;
 }
@@ -213,20 +214,21 @@ nav ul li a:hover {
 /* Other styles remain unchanged */
 
 /* about */
-
 #about {
+  background-color: #ffffff; /* Set background color to white */
   display: flex;
   align-items: center; /* Center items vertically */
   justify-content: center; /* Center items horizontally */
   height: 100vh; /* Set the height of the section to 100% of the viewport height */
-  background-image: url("./image/aboutbg3.avif");
-  background-size: cover; /* Cover entire section */
-  background-attachment: fixed; /* Ensure fixed background for parallax effect */
-  color: #fff; /* Set text color */
+  
+  color: #000000; /* Set text color to black */
 }
 
 #about .container {
+  background-color: #037fb1; /* Set background color to light blue */
   width: 40%; /* Set the width of the container */
+  border: 2px solid #ffffff; /* Add border around the container */
+  padding: 20px; /* Add padding inside the container */
 }
 
 #about h2 {
@@ -246,14 +248,16 @@ nav ul li a:hover {
   padding: 10px; /* Add padding to create square indentation */
 }
 
+
 /* media */
 
 #media {
+  background-color: white;
   position: relative;
-  background-image: url("./image/glowing-triangle-neon-4k_1669770373.jpg.webp"); /* Set your background image URL */
+  /* background-image: url("./image/glowing-triangle-neon-4k_1669770373.jpg.webp"); Set your background image URL */
   background-size: cover;
   background-attachment: fixed;
-  color: #fff; /* Set text color */
+  color: #000000; /* Set text color */
 }
 
 #media .container {
@@ -299,154 +303,166 @@ nav ul li a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow on hover */
 }
 
-/* news */
 #news {
-  background-image: url(./image/black-hexagon-abstract-gaming-background-vector-38743494.jpg);
-  background-size: cover;
-  color: #fff;
+  height: auto;
+  background-color: #ffffff; /* White background */
+  color: #333333; /* Dark text color */
+  padding: 80px 0;
 }
 
 #news .parallax-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   flex-direction: column;
 }
 
 #news .container {
-  max-width: 800px; /* Adjust container width */
-  padding: 0 20px; /* Add horizontal padding */
+  max-width: 800px;
 }
 
 #news .section-title {
-  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
   text-align: center;
-  font-size: 2rem;
-  font-weight: 900;
 }
 
 #news .cards {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px; /* Increased gap between cards */
 }
 
 #news .card {
-  flex: 0 0 calc(33.33% - 20px); /* Adjust card width */
-  margin: 10px;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
-  border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Soft shadow */
-  transition: transform 0.3s ease; /* Add transition for scaling */
+      margin-bottom: 4rem;
+  padding: 30px;
+  background-color: #f5f5f5; /* Light gray background for cards */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #news .card:hover {
-  transform: scale(1.05); /* Scale card on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slightly darker shadow on hover */
 }
 
 #news .card h3 {
-  color: #87ceeb; /* Change heading color */
-  font-size: 20px; /* Adjust font size for the heading */
-  margin-bottom: 10px; /* Add margin to separate heading from paragraph */
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #047ba5; /* Blue heading color */
 }
 
 #news .card p {
-  color: #fff; /* Change paragraph color */
-  font-size: 16px; /* Adjust font size for the paragraph */
-  line-height: 1.5; /* Adjust line height for better readability */
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555555; /* Dark gray text color */
 }
 
-/* purchasr */
 
-h1.purchase-heading {
-  margin-left: unset;
+#purchase {
+  background-color: white;
+  padding: 84px;
+  color: #000000;
+}
 
+.purchase-heading {
   color: #ffffff;
   text-align: center;
   margin-bottom: 40px;
   font-size: 2rem;
-  
   font-weight: 900;
 }
-#purchase {
-  padding: 84px;
-  color: #fff;
-  background-image: url(./image/Neon-Background-HD.jpg);
-  background-size: cover;
-}
 
-#purchase .container {
+.purchase-container {
   max-width: 800px;
-  display: flex;
-  justify-content: space-between; /* Space between form and digital edition */
-  align-items: center;
+  margin: 0 auto; /* Center the container */
+  overflow: hidden; /* Clear floats */
 }
 
-#purchase .purchase-details {
-  width: 48%; /* Adjust the width */
+.purchase-title {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-#purchase .digital-edition {
-  width: 50%;
-  margin-left: 11rem;
+.purchase-details {
+  float: left;
+  width: 48%;
+  margin-right: 4%; /* Adjust margin between columns */
 }
 
-#purchase .purchase-details h2 {
+.digital-edition {
+  float: left;
+  width: 48%;
+}
+
+@media screen and (max-width: 768px) {
+  .purchase-details,
+  .digital-edition {
+    float: none; /* Remove float for small devices */
+    width: 100%; /* Set width to 100% for full width */
+    margin-right: 0; /* Remove margin for small devices */
+    margin-bottom: 30px; /* Add some space between sections */
+  }
+}
+
+.purchase-details h2 {
   font-size: 28px;
   margin-bottom: 20px;
 }
 
-#purchase .purchase-form {
+.purchase-form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#purchase .purchase-form label {
+.purchase-form label {
   font-size: 18px;
   margin-bottom: 10px;
 }
 
-#purchase .purchase-form select,
-#purchase .purchase-form button {
+.purchase-form select,
+.purchase-form button {
   margin-top: 10px;
   padding: 12px 20px;
   font-size: 16px;
   border: none;
   border-radius: 14px;
   background-color: #000000;
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
   transition: background-color 0.3s ease;
   width: 100%; /* Adjusted width to 100% */
 }
 
-#purchase .purchase-form select:hover,
-#purchase .purchase-form select:focus {
+.purchase-form select:hover,
+.purchase-form select:focus {
   border-color: #007bff; /* Change border color on hover/focus */
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow on hover/focus */
 }
 
-#purchase .purchase-form select:focus {
+.purchase-form select:focus {
   background-color: transparent; /* Set background color to transparent on focus */
 }
 
-#purchase .purchase-form select option {
+.purchase-form select option {
   background-color: #333333; /* Dark grey background color */
   color: #ffffff; /* White text color */
   font-size: 16px; /* Font size */
   padding: 10px 15px; /* Padding around each option */
 }
 
-#purchase .purchase-form select option:hover {
+.purchase-form select option:hover {
   background-color: #8a2be2; /* Purple background color on hover */
   color: #ffffff; /* White text color on hover */
 }
 
-#purchase .blackboard {
+.blackboard {
   background-color: #000000;
   padding: 38px;
   border-radius: 33px;
@@ -455,12 +471,12 @@ h1.purchase-heading {
   height: 15rem;
 }
 
-#purchase .blackboard:hover {
+.blackboard:hover {
   box-shadow: 2px 2px 2px 2px rgba(0, 123, 255, 0.5);
   cursor: pointer;
 }
 
-#purchase .text-overlay {
+.text-overlay {
   text-align: center;
   color: #fff;
   animation: slideIn 1s ease forwards; /* Slide in animation */
@@ -477,23 +493,23 @@ h1.purchase-heading {
   }
 }
 
-#purchase .text-overlay h2 {
+.text-overlay h2 {
   font-size: 24px;
   margin-bottom: 10px; /* Adjust spacing between elements */
 }
 
-#purchase .text-overlay h3 {
+.text-overlay h3 {
   font-size: 18px;
   margin-top: 3rem; /* Adjust spacing between elements */
 }
 
-#purchase .blue-line {
+.blue-line {
   width: 144px;
   border: 1px solid #007bff;
   margin: 10px auto; /* Center the blue line and add spacing */
 }
 
-#purchase .purchase-form button {
+.purchase-form button {
   margin-top: 34px;
   padding: 12px 20px;
   font-size: 16px;
@@ -507,10 +523,19 @@ h1.purchase-heading {
   transition: background-color 0.3s ease;
 }
 
-#purchase .purchase-form button:hover {
+.purchase-form button:hover {
   background-color: rgb(32, 193, 211);
 }
 
+h1.purchase-heading.aos-init.aos-animate {
+  color: black;
+ 
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  font-weight: 900;
+  display: block; /* Make it a block-level element */
+}
 /* community */
 .community-section {
   background-color: rgb(
@@ -518,6 +543,9 @@ h1.purchase-heading {
     0,
     0
   ); /* Add black background color to the section */
+  padding: 30px;
+  height: 50vh;
+  
 }
 
 .community-heading {
@@ -805,3 +833,8 @@ h1.purchase-heading {
     text-align: center; /* Center-align text in footer legal section */
   }
 }
+@media screen and (max-width: 768px) {
+  .parallax-container.videoparallax {
+          margin-top: 20rem;
+  }
+  }
